@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+        两次加载 第一次加载标准形式的函数
+        第二次加载执行命令行
+-->
+<script type="text/javascript">
+            fun1();//此处输出数据结果? ? ?
+            function fun1(){
+                window.alert(1);
+            }
+            fun1();//此处输出数据结果?? ?
+            function fun1(){
+                window.alert(2);
+            }
+            var fun1=function(){window.alert(3)};
+            fun1();//此处输出数据结果???
+</script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function main() {
+           var dom1 =  document.getElementById("one");
+           dom1.onclick=f1;
+
+            var domArray = document.getElementsByName("two");
+            for(var i=0;i<domArray.length;i++) {
+                var tdDom = domArray[i];
+                tdDom.onclick =f2;
+            }
+
+            var domArray2 = document.getElementsByTagName("tr");
+            for(var i =1;i<domArray2.length;i++) {
+                var trDom = domArray2[i];
+                trDom.onmouseover = f3;
+                trDom.onmouseout = f4;
+            }
+
+        }
+        function f1() {
+            var dom1 =  document.getElementById("one");
+            var flag = dom1.checked;
+            var domArray = document.getElementsByName("two");
+            for(var i=0;i<domArray.length;i++) {
+                var tdDom = domArray[i];
+                tdDom.checked = flag;
+            }
+        }
+        function f2() {
+            var checkedNum = 0;
+            var domArray = document.getElementsByName("two");
+            for(var i=0;i<domArray.length;i++) {
+                var tdDom = domArray[i];
+                if(tdDom.checked == true) {
+                    checkedNum++;
+                }
+            }
+            if(checkedNum == domArray.length) {
+                document.getElementById("one").checked = true;
+            }else {
+                document.getElementById("one").checked = false;
+            }
+        }
+
+        function f3() {
+            this.style.backgroundColor = "antiqueWhite";
+        }
+        function f4() {
+            this.style.backgroundColor = "white";
+        }
+
+    </script>
+</head>
+<body onload="main()">
+
+<center>
+    <table border="2" >
+        <tr>
+            <td><input type="checkbox" id="one">全选/全不选</td>
+            <td>职员姓名</td>
+            <td>职员职位</td>
+            <td>职员薪资</td>
+        </tr>
+        <!--this指当前标签的dom对象-->
+        <tr>
+            <td><input type="checkbox" name="two"></td>
+            <td>mike</td>
+            <td>初级程序员</td>
+            <td>10000</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="two"></td>
+            <td>smith</td>
+            <td>高级程序员</td>
+            <td>30000</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="two"></td>
+            <td>king</td>
+            <td>架构师</td>
+            <td>50000</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="two"></td>
+            <td>jones</td>
+            <td>产品经理</td>
+            <td>15000</td>
+        </tr>
+    </table>
+</center>
+</body>
+</html>

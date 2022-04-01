@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function fun1(){
+            var myArray = [
+                "about","at","apple","around","battle","boom","beautiful","cool","duck","java","mysql",
+                "hello","world","successful"
+            ];
+            var content = document.getElementById("one").value;
+            if(content=="") {
+                document.getElementById("div").style.display = "none";
+                return;
+            }
+
+            var value="";
+            for(var i =0;i<myArray.length;i++) {
+                if(myArray[i].indexOf(content)!=-1) {
+                    var str=myArray[i];
+                    value+=str+"<br/>"
+                }
+            }
+             if(value==""){
+                 document.getElementById("div").style.display = "none";
+                 return;
+             }
+            document.getElementById("div").innerHTML=value;
+            document.getElementById("div").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+<center>
+    <div>
+        <img src="1.png" style="height: 129px;width: 270px">
+    </div>
+    <input type="text" id="one" style="width: 400px;height: 30px" onkeyup="fun1()">
+    <input type="button" style="color:white;background-color:dodgerblue;
+    width:100px;height:33px;font-size:14px"  value="百度一下" >
+    <div  id="div" style="background-color: antiquewhite;
+    width:500px;height: 400px;display: none" ></div>
+</center>
+</body>
+</html>

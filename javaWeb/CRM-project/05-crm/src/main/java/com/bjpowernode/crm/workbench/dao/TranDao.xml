@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bjpowernode.crm.workbench.dao.TranDao">
+
+
+    <select id="getTotal" resultType="int">
+        select count(*)
+        from tbl_tran tran
+        join tbl_customer c
+        on c.id=tran.customerId
+        join tbl_contacts c2
+        on c2.id=tran.contactsId
+        join tbl_user u
+        on u.id=tran.owner
+        <where>
+            <if test="owner!=null and owner!=''">
+                and tran.owner like '%' #{owner} '%'
+            </if>
+            <if test="name!=null and name!=''">
+                and tran.name like '%' #{name} '%'
+            </if>
+            <if test="customer!=null and customer!=''">
+                and c.name like '%' #{customer} '%'
+            </if>
+            <if test="stage!=null and stage!=''">
+                and tran.stage like '%' #{stage} '%'
+            </if>
+            <if test="type!=null and type!=''">
+                and tran.type like '%' #{type} '%'
+            </if>
+            <if test="source!=null and source!=''">
+                and tran.source like '%' #{source} '%'
+            </if>
+            <if test="contacts!=null and contacts!=''">
+                and c2.name like '%' #{contacts} '%'
+            </if>
+        </where>
+    </select>
+    <select id="getDataList" resultType="map">
+        select
+        tran.id,
+        tran.name,
+        u.name as owner,
+        tran.stage,
+        tran.type,
+        tran.source,
+        c.name as customer,
+        c2.fullname as contacts
+
+        from tbl_tran tran
+        join tbl_customer c
+        on c.id=tran.customerId
+        join tbl_contacts c2
+        on c2.id=tran.contactsId
+        join tbl_user u
+        on u.id=tran.owner
+        <where>
+            <if test="owner!=null and owner!=''">
+                 tran.owner like '%' #{owner} '%'
+            </if>
+            <if test="name!=null and name!=''">
+                and tran.name like '%' #{name} '%'
+            </if>
+            <if test="customer!=null and customer!=''">
+                and c.name like '%' #{customer} '%'
+            </if>
+            <if test="stage!=null and stage!=''">
+                and tran.stage like '%' #{stage} '%'
+            </if>
+            <if test="type!=null and type!=''">
+                and tran.type like '%' #{type} '%'
+            </if>
+            <if test="source!=null and source!=''">
+                and tran.source like '%' #{source} '%'
+            </if>
+            <if test="contacts!=null and contacts!=''">
+                and c2.fullname like '%' #{contacts} '%'
+            </if>
+        </where>
+        limit #{skipCount},#{pageSize}
+    </select>
+    <select id="getById" resultType="Tran">
+        select
+            tran.id,
+            u.name as owner,
+            tran.money,
+            tran.name,
+            tran.expectedDate,
+            customer.name as customerId,
+            tran.stage,
+            tran.type,
+            tran.source,
+            a.name as activityId,
+            con.fullname as contactsId,
+            tran.createBy,
+            tran.createTime,
+            tran.description,
+            tran.contactSummary,
+            tran.nextContactTime
+
+        from tbl_tran tran
+        join tbl_user u
+        on tran.owner=u.id
+        join tbl_customer customer
+        on customer.id=tran.customerId
+        left join tbl_contacts con
+        on con.id=tran.contactsId
+        left join tbl_activity a
+        on a.id=tran.activityId
+        where tran.id=#{id}
+
+    </select>
+	<insert id="save">
+        insert into tbl_tran
+        (
+            id,
+            owner,
+            money,
+            name,
+            expectedDate,
+            customerId,
+            stage,
+            type,
+            source,
+            activityId,
+            contactsId,
+            createBy,
+            createTime,
+            editBy,
+            editTime,
+            description,
+            contactSummary,
+            nextContactTime
+
+        )
+        values
+        (
+            #{id},
+            #{owner},
+            #{money},
+            #{name},
+            #{expectedDate},
+            #{customerId},
+            #{stage},
+            #{type},
+            #{source},
+            #{activityId},
+            #{contactsId},
+            #{createBy},
+            #{createTime},
+            #{editBy},
+            #{editTime},
+            #{description},
+            #{contactSummary},
+            #{nextContactTime}
+        )
+    </insert>
+  	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

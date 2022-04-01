@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="10-link-interface" />
+        <module name="17-zk-multi-consumer" />
+        <module name="11-link-userservice-provider" />
+        <module name="05-crm" />
+        <module name="09-dubbo-link-consumer" />
+        <module name="16-zk-userservice-multi-provider" />
+        <module name="12-link-consumer" />
+        <module name="13-zk-interface" />
+        <module name="06-crm_ssm" />
+        <module name="15-zk-consumer" />
+        <module name="07-crm-mybatis-generator" />
+        <module name="08-dubbo-link-userservice-provider" />
+        <module name="14-zk-userservice-provider" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="05-crm" target="1.5" />
+      <module name="06-crm_ssm" target="1.8" />
+      <module name="07-crm-mybatis-generator" target="1.5" />
+      <module name="08-dubbo-link-userservice-provider" target="1.8" />
+      <module name="09-dubbo-link-consumer" target="1.5" />
+      <module name="10-link-interface" target="1.5" />
+      <module name="11-link-userservice-provider" target="1.8" />
+      <module name="12-link-consumer" target="1.8" />
+      <module name="13-zk-interface" target="1.5" />
+      <module name="14-zk-userservice-provider" target="1.8" />
+      <module name="15-zk-consumer" target="1.8" />
+      <module name="16-zk-userservice-multi-provider" target="1.8" />
+      <module name="17-zk-multi-consumer" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

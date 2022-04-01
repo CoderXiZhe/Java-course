@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+        namespace:命名空间
+                不同的mapper映射文件使用namespace做区分 不允许出现重复
+
+-->
+<mapper namespace="test">
+<!--
+        sql语句必须写在响应标签中
+        <insert>:
+        <update>:
+        <delete>:
+        <select>:
+
+        parameterType:为sql语句传递的参数类型
+-->
+
+    <select id="getById" parameterType="java.lang.String" resultType="com.bjpowernode.domain.Student">
+        select * from tbl_student where id=#{id}
+    </select>
+
+    <select id="getAll"  resultType="com.bjpowernode.domain.Student">
+        select * from tbl_student
+    </select>
+    <!--
+            注意：
+                在未来实际开发中 所有标签都要写id属性
+                <select>标签中 parameterType可不写
+                              resultType必须写
+                 对于<insert><update><delete>通常只写id属性 其他不写
+    -->
+
+    <insert id="save">
+        insert into tbl_student(id,name,age) values(#{id},#{name},#{age})
+    </insert>
+
+
+    <update id="update">
+        update tbl_student set name=#{name},age=#{age} where id=#{id}
+    </update>
+
+
+    <delete id="delete">
+        delete from tbl_student where id=#{id}
+    </delete>
+</mapper>

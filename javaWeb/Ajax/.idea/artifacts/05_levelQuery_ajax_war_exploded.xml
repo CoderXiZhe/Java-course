@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="05_levelQuery_ajax:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/05_levelQuery_ajax_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="05_levelQuery_ajax" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/05_levelQuery_ajax/web/WEB-INF/lib/mysql-connector-java-5.1.6.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/05_levelQuery_ajax/web/WEB-INF/lib/fastjson-1.2.75.jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="05_levelQuery_ajax/web/Web" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <script type="text/javascript" >
+            function  f1() {
+                return "hello"
+            }
+
+            var num1 = f1();//普通函数调用
+            window.alert("num1=" + num1 + "  数据类型" + typeof num1);
+
+            var num2 = new f1();//构造函数调用
+            window.alert("num2=" + num2 + "  数据类型" + typeof num2);
+        </script>
+</body>
+</html>

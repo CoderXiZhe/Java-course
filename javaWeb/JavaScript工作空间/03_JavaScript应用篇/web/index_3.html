@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function f1(color) {
+           var divDom =  document.getElementById("one");
+           divDom.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+        <center>
+            <div id="one" style="height:300px;width:300px;background-color:yellow"></div>
+            <input type="radio"  name="color" value="蓝色" onclick="f1('blue')">蓝色
+            <input type="radio"  name="color" value="红色" onclick="f1('red')">红色
+            <input type="radio"  name="color" value="青色" onclick="f1('cyan')">青色
+        </center>
+</body>
+</html>

@@ -1,0 +1,62 @@
+任务：在线考试管理系统
+
+子任务：
+        用户信息注册
+        用户信息查询
+        用户信息删除
+        用户信息更新
+
+准备工作:
+
+        1.创建用户信息表 User.frm
+
+        CREATE TABLE Users(
+            userId int primary key auto_increment, #用户编号
+            userName varchar(50),       #用户名称          //varchar以时间换空间  char以空间换时间
+            password varchar(50),       #用户密码
+            sex      char(1),            #用户性别 ‘男’ ‘女’
+            email     varchar(50)       #用户邮箱
+        )
+        auto_increment 自增序列
+        在插入时  如果不给定用户具体编号 此时根据auto_increment的值递增
+
+        2.在src下 com.bjpowernode.entity.Users 实体类
+        3.在src下 com.bjpowernode.util.JdbcUtil 工具类
+        4.在web-inf 下创建lib文件夹 存放mysql提供jdbc的jar包
+
+任务：在线考试管理系统 --- 试题信息管理模块
+
+子任务:
+    添加试题
+    查询试题
+    删除试题
+    更新试题
+
+    准备工作:
+        1.准备试题信息表:单选题，每道题有4个选项一个正确答案
+            create table question(
+            questionId int primary key auto_increment,
+            title varchar(50),#10-8=?
+            optionA varchar(20),#A:9
+            optionB varchar(20),#B:1
+            optionC varchar(20),#C:2
+            optionD varchar(20),#D:0
+            answer char(1)      #正确答案:c
+            )
+        2.com.bjpowernode.entity.Question
+
+开发任务:   随机出题
+
+任务描述：用户点击[参加考试]  系统[随机]提取四道考试题叫给用户
+
+
+开发任务:   在线阅卷
+
+
+
+
+
+
+
+
+

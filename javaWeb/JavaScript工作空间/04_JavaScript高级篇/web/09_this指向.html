@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <script type="text/javascript">
+            var name = "mike";
+
+            function f1() {
+                this.id = 10;
+                this.name = "allen";
+            }
+
+            f1();//普通调用    window.f1()  this->window   this.name='mike'
+            window.alert("name=" + window.name);
+
+            //var obj = new f1(); //this->obj
+            //window.alert("name=" + window.name);
+
+        </script>
+</body>
+</html>

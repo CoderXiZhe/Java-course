@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/03_servlet生命周期/03_servlet生命周期.iml" filepath="$PROJECT_DIR$/03_servlet生命周期/03_servlet生命周期.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_HttpServletResponse介绍/04_HttpServletResponse介绍.iml" filepath="$PROJECT_DIR$/04_HttpServletResponse介绍/04_HttpServletResponse介绍.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_HttpServletRequest介绍/05_HttpServletRequest介绍.iml" filepath="$PROJECT_DIR$/05_HttpServletRequest介绍/05_HttpServletRequest介绍.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_在线考试管理系统/06_在线考试管理系统.iml" filepath="$PROJECT_DIR$/06_在线考试管理系统/06_在线考试管理系统.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07_Http状态码-302/07_Http状态码-302.iml" filepath="$PROJECT_DIR$/07_Http状态码-302/07_Http状态码-302.iml" />
+      <module fileurl="file://$PROJECT_DIR$/0_test/0_test.iml" filepath="$PROJECT_DIR$/0_test/0_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11_请求转发解决方案/11_请求转发解决方案.iml" filepath="$PROJECT_DIR$/11_请求转发解决方案/11_请求转发解决方案.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12_ServletContext/12_ServletContext.iml" filepath="$PROJECT_DIR$/12_ServletContext/12_ServletContext.iml" />
+      <module fileurl="file://$PROJECT_DIR$/13_Cookie/13_Cookie.iml" filepath="$PROJECT_DIR$/13_Cookie/13_Cookie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/14_HttpSession/14_HttpSession.iml" filepath="$PROJECT_DIR$/14_HttpSession/14_HttpSession.iml" />
+      <module fileurl="file://$PROJECT_DIR$/15_HttpServletRequest/15_HttpServletRequest.iml" filepath="$PROJECT_DIR$/15_HttpServletRequest/15_HttpServletRequest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/16_ServletContextListner/16_ServletContextListner.iml" filepath="$PROJECT_DIR$/16_ServletContextListner/16_ServletContextListner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/17_ServletContextAttributeListener/17_ServletContextAttributeListener.iml" filepath="$PROJECT_DIR$/17_ServletContextAttributeListener/17_ServletContextAttributeListener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/18_过滤器检测请求合法性/18_过滤器检测请求合法性.iml" filepath="$PROJECT_DIR$/18_过滤器检测请求合法性/18_过滤器检测请求合法性.iml" />
+      <module fileurl="file://$PROJECT_DIR$/19_利用filter对请求对象进行增强服务/19_利用filter对请求对象进行增强服务.iml" filepath="$PROJECT_DIR$/19_利用filter对请求对象进行增强服务/19_利用filter对请求对象进行增强服务.iml" />
+      <module fileurl="file://$PROJECT_DIR$/20_JSP文件使用展示/20_JSP文件使用展示.iml" filepath="$PROJECT_DIR$/20_JSP文件使用展示/20_JSP文件使用展示.iml" />
+      <module fileurl="file://$PROJECT_DIR$/21_JSP文件内置java对象/21_JSP文件内置java对象.iml" filepath="$PROJECT_DIR$/21_JSP文件内置java对象/21_JSP文件内置java对象.iml" />
+      <module fileurl="file://$PROJECT_DIR$/22_Servlet与jsp联合调用/22_Servlet与jsp联合调用.iml" filepath="$PROJECT_DIR$/22_Servlet与jsp联合调用/22_Servlet与jsp联合调用.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Test2/Test2.iml" filepath="$PROJECT_DIR$/Test2/Test2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/javaWeb.iml" filepath="$PROJECT_DIR$/.idea/javaWeb.iml" />
+    </modules>
+  </component>
+</project>

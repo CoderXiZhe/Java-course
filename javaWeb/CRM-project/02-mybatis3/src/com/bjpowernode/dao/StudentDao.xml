@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+        namespace:命名空间
+                不同的mapper映射文件使用namespace做区分 不允许出现重复
+
+-->
+<mapper namespace="com.bjpowernode.dao.StudentDao">
+    <select id="getById" parameterType="java.lang.String" resultType="com.bjpowernode.domain.Student">
+        select * from tbl_student where id=#{id}
+    </select>
+
+    <select id="getAll"  resultType="Student">
+        select * from tbl_student
+    </select>
+
+    <insert id="save">
+        insert into tbl_student(id,name,age) values(#{id},#{name},#{age})
+    </insert>
+
+    <select id="select1" parameterType="Student" resultType="Student">
+            select * from tbl_student
+
+            <!--
+                    where标签：
+                        当where标签在使用的时候 必须搭配if来使用
+                        如果有查询条件则展现where关键字 没有则不展示
+
+                        以前是&& 现在这里要写成and
+                        双引号里面用引号得是单引号 单引号再套一个就需要转义了
+
+                        sql中空格作为拼接字符串
+                        if标签中test里的name 和命令里的name 必须是传过来的Student的属性
+
+                        where标签会智能屏蔽掉第一个连接符 and/or
+            -->
+            <where>
+                <if test="name!=null and name!=''">
+                    and name like '%' #{name} '%'
+                </if>
+
+                <if test="address!=null and address!=''">
+                    and address like '%' #{address} '%'
+                </if>
+            </where>
+    </select>
+
+    <select id="select2"  resultType="Student">
+
+        select * from tbl_student
+        where id in
+
+        <!--
+                foreach标签: 用来遍历传递来的数组参数
+
+                collection：标识传递参数的类型
+                            array：数组
+                            list：集合
+
+                 item：每一次遍历出来的元素 在使用该元素的时候 需要套用在#{}
+
+                 open：拼接循环的开始符号
+                 close:拼接循环的结束符号
+                 separator：元素与元素之间的分隔符
+
+
+
+        -->
+        <foreach collection="array" item="id" open="(" close=")" separator=",">
+           #{id}
+        </foreach>
+
+
+    </select>
+    <!--
+            使用sql标签制作sql片段
+            如果mapper文件中的sql语句出现大量的重复 可以使用sql片段来代替他们
+            id:sql片段的唯一标识符 用id来定位sql片段
+
+            将来的实际项目中 使用sql片段来代替重复率高且复杂的子查询
+
+            注意：
+                对于sql片段
+                    在同一个mapper下 大量的重复出现的子查询的几率不高 所以一般情况sql片段没必要
+                    太多的sql片段 导致 可读性低
+    -->
+    <sql id="sql1">
+        select * from tbl_student
+    </sql>
+    <select id="select3" resultType="Student">
+        <include refid="sql1"/> where id=#{id}
+    </select>
+
+    <select id="select4" resultType="map">
+        select
+
+        s.name as sname,
+        c.name as cname
+
+        from tbl_student s
+        join tbl_classroom c
+        on s.classroomId=c.id
+    </select>
+
+    <select id="select5" resultType="com.bjpowernode.vo.StudentAndClassroomVo">
+
+        select
+
+        s.id sid,
+        s.name sname,
+        s.age sage,
+        s.address  saddress,
+        c.id cid,
+        c.name cname
+
+        from tbl_student s  <!--多表联查要起别名-->
+        join tbl_classroom c
+        on s.classroomId=c.id
+    </select>
+
+    <select id="select6" parameterType="Student" resultType="com.bjpowernode.vo.StudentAndClassroomVo">
+
+        select
+
+        s.id sid,
+        s.name sname,
+        s.age sage,
+        s.address  saddress,
+        c.id cid,
+        c.name cname
+
+        from tbl_student s
+        join tbl_classroom c
+        on s.classroomId=c.id
+        <where>
+            <if test="name!=null and name!=''">
+                and s.name like '%' #{name} '%'
+            </if>
+        </where>
+    </select>
+</mapper>

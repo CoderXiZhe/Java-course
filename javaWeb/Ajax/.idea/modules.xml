@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01_Ajax/01_Ajax.iml" filepath="$PROJECT_DIR$/01_Ajax/01_Ajax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_Ajax/02_Ajax.iml" filepath="$PROJECT_DIR$/02_Ajax/02_Ajax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_Ajax/03_Ajax.iml" filepath="$PROJECT_DIR$/03_Ajax/03_Ajax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_test/04_test.iml" filepath="$PROJECT_DIR$/04_test/04_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_levelQuery_ajax/05_levelQuery_ajax.iml" filepath="$PROJECT_DIR$/05_levelQuery_ajax/05_levelQuery_ajax.iml" />
+    </modules>
+  </component>
+</project>

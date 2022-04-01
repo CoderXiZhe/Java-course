@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="db.properties"></properties>
+    <!--为mapper映射文件中的domain起别名-->
+    <typeAliases>
+        <!--
+                方式1：
+                    为指定的类起别名 别名的命名由我们决定
+                    type：要为哪个类起别名
+                    alias:别名的名字
+        -->
+<!--        <typeAlias type="com.bjpowernode.domain.Student" alias="stu"></typeAlias>-->
+        <!--
+                方式2:
+                    批量起别名
+                    别名是mybatis默认为我们取好的 别名为类名
+                    name:指定一个包结构
+        -->
+        <!--
+                总结:
+                    1.如果需要起别名 需要使用批量起别名的方式
+                    2.也有的摒弃mybatis机制  用全路径  可以有效提高代码的可读性
+        -->
+        <package name="com.bjpowernode.domain"/>
+    </typeAliases>
+
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}" />
+                <property name="url" value="${jdbc.url}" />
+                <property name="username" value="${jdbc.username}" />
+                <property name="password" value="${jdbc.password}" />
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!-- <mapper resource="com/bjpowernode/mybatis/dao/StudentDao.xml" /> -->
+
+        <!--
+                方式1：
+                    使用resource属性 指定mapper映射文件
+        -->
+<!--         <mapper resource="com/bjpowernode/dao/StudentDao.xml" />-->
+
+        <!--
+                方式2:
+                    使用class属性 找到dao层接口的全路径
+
+        -->
+<!--        <mapper class="com.bjpowernode.dao.StudentDao"></mapper>-->
+
+        <!--
+                方式3：
+                    批量注册
+                    name:指向dao层的包 表示在该包下 所有的mapper映射文件自动注册
+        -->
+
+        <!--
+                总结:
+                    未来实际开发中 一定选择批量注册方式
+        -->
+        <package name="com.bjpowernode.dao"/>
+    </mappers>
+</configuration>

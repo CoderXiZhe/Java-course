@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+    // 1.浏览器自上而下解析网页标签
+    // 2.在执行var dom0bj = document.getElementById("one')
+    // 浏览器还没有机会加载文本，因此在DOM树上投法得到对应DOM对象，因此只能返回null
+    // var domObj = document. etElementById('one'); .
+    // var str = domObj.value; //TypeError: domObj is null
+    // window.alert(str) ;
+    function fun1() {
+        var dom0bj = document.getElementById('one');
+        var str = dom0bj.value;
+        window.alert(str);
+    }
+
+    </script>
+
+    </head>
+<body onload="fun1()">
+    <input type="text" value="666" id="one">
+</body>
+</html>

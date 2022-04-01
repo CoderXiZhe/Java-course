@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01-ajax/01-ajax.iml" filepath="$PROJECT_DIR$/01-ajax/01-ajax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-mybatis/02-mybatis.iml" filepath="$PROJECT_DIR$/02-mybatis/02-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-mybatis2/02-mybatis2.iml" filepath="$PROJECT_DIR$/02-mybatis2/02-mybatis2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-mybatis3/02-mybatis3.iml" filepath="$PROJECT_DIR$/02-mybatis3/02-mybatis3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-test/03-test.iml" filepath="$PROJECT_DIR$/03-test/03-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-GitHub-test/04-GitHub-test.iml" filepath="$PROJECT_DIR$/04-GitHub-test/04-GitHub-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05-crm/05-crm.iml" filepath="$PROJECT_DIR$/05-crm/05-crm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-crm_ssm/06-crm_ssm.iml" filepath="$PROJECT_DIR$/06-crm_ssm/06-crm_ssm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-crm-mybatis-generator/07-crm-mybatis-generator.iml" filepath="$PROJECT_DIR$/07-crm-mybatis-generator/07-crm-mybatis-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08-dubbo-link-userservice-provider/08-dubbo-link-userservice-provider.iml" filepath="$PROJECT_DIR$/08-dubbo-link-userservice-provider/08-dubbo-link-userservice-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09-dubbo-link-consumer/09-dubbo-link-consumer.iml" filepath="$PROJECT_DIR$/09-dubbo-link-consumer/09-dubbo-link-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10-link-interface/10-link-interface.iml" filepath="$PROJECT_DIR$/10-link-interface/10-link-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11-link-userservice-provider/11-link-userservice-provider.iml" filepath="$PROJECT_DIR$/11-link-userservice-provider/11-link-userservice-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12-link-consumer/12-link-consumer.iml" filepath="$PROJECT_DIR$/12-link-consumer/12-link-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../dubbo/13-zk-interface/13-zk-interface.iml" filepath="$PROJECT_DIR$/../../dubbo/13-zk-interface/13-zk-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../dubbo/14-zk-userservice-provider/14-zk-userservice-provider.iml" filepath="$PROJECT_DIR$/../../dubbo/14-zk-userservice-provider/14-zk-userservice-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../dubbo/15-zk-consumer/15-zk-consumer.iml" filepath="$PROJECT_DIR$/../../dubbo/15-zk-consumer/15-zk-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../dubbo/17-zk-multi-consumer/16-zk-multi-consumer.iml" filepath="$PROJECT_DIR$/../../dubbo/17-zk-multi-consumer/16-zk-multi-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../dubbo/16-zk-userservice-multi-provider/16-zk-userservice-multi-provider.iml" filepath="$PROJECT_DIR$/../../dubbo/16-zk-userservice-multi-provider/16-zk-userservice-multi-provider.iml" />
+    </modules>
+  </component>
+</project>

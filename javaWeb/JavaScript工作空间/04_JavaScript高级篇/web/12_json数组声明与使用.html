@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <script type="text/javascript">
+            var jsonArray = [
+                {"cityId":1,"cityName":"北京"},
+                {"cityId":2,"cityName":"上海"},
+                {"cityId":3,"cityName":"深圳"},
+            ]
+
+            for(var i=0;i<jsonArray.length;i++) {
+                var jsonObj = jsonArray[i];
+                window.alert("cityId:" + jsonObj.cityId + "     cityName:" + jsonObj.cityName)
+            }
+
+        </script>
+</body>
+</html>

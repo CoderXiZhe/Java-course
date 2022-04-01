@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+            /*
+             *在Java中存在一个HasMap类型
+             * 以键值对方式存储数据
+             *一次可以存储多个键值对
+             *并且要求每一个关键字都是唯一
+             *读取可以通过给定关键字读取对应的值*器具体使用方式如下
+             * HashMap map = new HashMap(;* map.put( "key1",100)
+             * map.put( "key2"，200)
+             *map.get("key1" ) ==100
+             * map.get( "key2") ==200
+             * JavaScript中并不存在HasHap类型，要求在JavaScript模拟出一个HashMap类型对象*要求具有上述所有功能
+             */
+            function HashMap(){
+                var obj = new Object();
+                this.put = function (key,value) {
+                    obj[key] = value;
+                }
+                this.get = function (key) {
+                    return obj[key];
+                }
+            }
+            var map = new HashMap();
+            map.put("key1",100);
+            var num = map.get("key1");
+            window.alert("num = " + num+ "数据类型：" + typeof num);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" >
+        function f1() {
+           var domArray =  document.getElementsByTagName("p");
+           for(var i=0;i<domArray.length;i++){
+               var domObj = domArray[i];
+               window.alert("段落内容:" + domObj.innerText)
+           }
+
+        }
+    </script>
+</head>
+<body>
+        <div>这是第一个div</div>
+        <p>这是第一个段落</p>
+        <div>这是第二个div</div>
+        <p>这是第二个段落</p>
+        <div>这是第三个div</div>
+        <p>这是第三段落</p>
+<input type="button" value="获取所有段落标签的内容" onclick="f1()" >
+</body>
+</html>

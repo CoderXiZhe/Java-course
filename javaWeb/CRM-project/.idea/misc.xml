@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../../dubbo/14-zk-userservice-provider" />
+    <file type="web" url="file://$PROJECT_DIR$/../../dubbo/15-zk-consumer" />
+    <file type="web" url="file://$PROJECT_DIR$/../../dubbo/16-zk-userservice-multi-provider" />
+    <file type="web" url="file://$PROJECT_DIR$/../../dubbo/17-zk-multi-consumer" />
+    <file type="web" url="file://$PROJECT_DIR$/05-crm" />
+    <file type="web" url="file://$PROJECT_DIR$/06-crm_ssm" />
+    <file type="web" url="file://$PROJECT_DIR$/08-dubbo-link-userservice-provider" />
+    <file type="web" url="file://$PROJECT_DIR$/09-dubbo-link-consumer" />
+    <file type="web" url="file://$PROJECT_DIR$/10-link-interface" />
+    <file type="web" url="file://$PROJECT_DIR$/11-link-userservice-provider" />
+    <file type="web" url="file://$PROJECT_DIR$/12-link-consumer" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/05-crm/pom.xml" />
+        <option value="$PROJECT_DIR$/06-crm_ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/07-crm-mybatis-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/08-dubbo-link-userservice-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/09-dubbo-link-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/10-link-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/11-link-userservice-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/12-link-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/../../dubbo/13-zk-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/../../dubbo/14-zk-userservice-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/../../dubbo/15-zk-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/../../dubbo/16-zk-userservice-multi-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/../../dubbo/16-zk-multi-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/../../dubbo/17-zk-multi-consumer/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

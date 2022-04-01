@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01_static/01_static.iml" filepath="$PROJECT_DIR$/01_static/01_static.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_method/02_method.iml" filepath="$PROJECT_DIR$/02_method/02_method.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_dynamic/03_dynamic.iml" filepath="$PROJECT_DIR$/03_dynamic/03_dynamic.iml" />
+    </modules>
+  </component>
+</project>

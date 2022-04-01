@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" >
+        function f1() {
+            var content = document.getElementById("two").value;
+            document.getElementById("one").innerHTML = content;
+        }
+    </script>
+</head>
+<body>
+<center>
+    <div id="one" style="font-size:30px;background-color:rosybrown;color:blue;height:300px;width: 300px">
+
+    </div>
+    <br>
+    <input type="text" id="two">
+    <input type="button" value="设置div文字内容" onclick="f1()">
+</center>
+</body>
+</html>

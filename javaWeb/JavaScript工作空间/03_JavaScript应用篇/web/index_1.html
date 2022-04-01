@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript">
+
+        function f1() {
+            var domArray = document.getElementsByName("deptNo");
+            for(var i=0;i<domArray.length;i++) {
+                var domObj = domArray[i];
+                window.alert("部门编号："+ domObj.value);
+            }
+
+        }
+    </script>
+</head>
+<body>
+            <input type="checkbox" name="deptNo" value="10">部门编号10
+            <input type="checkbox" name="deptNo" value="20">部门编号20
+            <input type="checkbox" name="deptNo" value="30">部门编号30
+
+            <input type="button" value="获取所有部门编号的值" onclick="f1()">
+</body>
+</html>

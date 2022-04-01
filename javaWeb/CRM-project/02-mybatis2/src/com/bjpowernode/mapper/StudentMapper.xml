@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+        namespace:命名空间
+                不同的mapper映射文件使用namespace做区分 不允许出现重复
+
+-->
+<mapper namespace="test">
+    <select id="getById" parameterType="java.lang.String" resultType="com.bjpowernode.domain.Student">
+        select * from tbl_student where id=#{id}
+    </select>
+
+    <select id="getAll"  resultType="com.bjpowernode.domain.Student">
+        select * from tbl_student
+    </select>
+    <insert id="save">
+        insert into tbl_student(id,name,age) values(#{id},#{name},#{age})
+    </insert>
+</mapper>

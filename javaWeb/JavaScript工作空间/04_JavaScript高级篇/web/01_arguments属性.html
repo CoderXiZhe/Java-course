@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        function f1() {
+            window.alert("f1()接受到实参个数："+ arguments.length);
+            for(var i =0;i<arguments.length;i++) {
+                var param = arguments[i];
+                window.alert("第"+(i+1)+"个参数:"+param+"参数类型" + typeof param);
+
+            }
+
+        }
+        f1(10,"20",new Date())
+
+
+
+        function fun3(){
+            if(arguments.length == 1 && typeof arguments[0] =='string'){
+                window.alert("Hello "+arguments[0])
+            }else if(arguments.length ==2 && typeof arguments[0] =='number' && typeof arguments[1]
+            == 'number') {
+            var num3 = arguments[0] + arguments[1];
+            window.alert("数字"+arguments[0]+" + "+arguments[1]+"="+num3);
+          }
+        }
+        //测试
+        //fun3 (1,2);
+
+    </script>
+</body>
+</html>

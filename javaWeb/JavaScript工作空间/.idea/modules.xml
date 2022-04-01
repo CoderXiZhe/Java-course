@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01_初识JavaScript/01_初识JavaScript.iml" filepath="$PROJECT_DIR$/01_初识JavaScript/01_初识JavaScript.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_JavaScript语法入门/02_JavaScript语法入门.iml" filepath="$PROJECT_DIR$/02_JavaScript语法入门/02_JavaScript语法入门.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_JavaScript应用篇/03_JavaScript应用篇.iml" filepath="$PROJECT_DIR$/03_JavaScript应用篇/03_JavaScript应用篇.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_JavaScript高级篇/04_JavaScript高级篇.iml" filepath="$PROJECT_DIR$/04_JavaScript高级篇/04_JavaScript高级篇.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_json实现服务端与js之间数据通信/05_json实现服务端与js之间数据通信.iml" filepath="$PROJECT_DIR$/05_json实现服务端与js之间数据通信/05_json实现服务端与js之间数据通信.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_json工具包使用/06_json工具包使用.iml" filepath="$PROJECT_DIR$/06_json工具包使用/06_json工具包使用.iml" />
+    </modules>
+  </component>
+</project>

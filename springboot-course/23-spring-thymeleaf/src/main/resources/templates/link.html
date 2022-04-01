@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <p>链接表达式 @{}</p>
+    <h3>绝对地址</h3>
+    <a th:href="@{http://www.baidu.com}">链接到百度</a>
+    <h3>相对地址 没有参数</h3>
+    <a th:href="@{/tpl/query1}">相对地址query1</a>
+    <h3>相对地址 有参数</h3>
+    <a th:href="@{'/tpl/query2?name=' +${name} +'&age=' + ${age} }">相对地址query2</a>
+    <h3>推荐使用的传参方式</h3>
+    <a th:href="@{/tpl/query1(id=${id})}">传参1</a>
+    <a th:href="@{/tpl/query2(name=${name},age=${age})}">传参2</a>
+</center>
+</body>
+</html>

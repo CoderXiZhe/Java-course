@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bjpowernode.dao.StudentDao">
+
+    <select id="queryStudentByPhone" resultType="int" >
+        select count(*) from tbl_student
+        where phone=#{phone}
+    </select>
+
+    <select id="queryStudent" resultType="entity.Student">
+        select id,name,phone,age from tbl_student where id=#{id}
+    </select>
+
+    <insert id="addStudent" >
+        insert into tbl_student(id,name,phone,age) values (#{id},#{name},#{phone},${age})
+    </insert>
+
+
+
+</mapper>

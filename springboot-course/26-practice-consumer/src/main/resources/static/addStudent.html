@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.4.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $("#queryBtn").click(function () {
+                var id = $("#query").val()
+                $.ajax({
+                    url:'student/query',
+                    data:{
+                        id:id
+                    },
+                    dataType:'json',
+                    type:'get',
+                    success:function (data) {
+                        var html='';
+                          html+='<tr>'
+                          html+='<td>'+data.id+'</td>'
+                          html+='<td>'+data.name+'</td>'
+                          html+='<td>'+data.phone+'</td>'
+                          html+='<td>'+data.age+'</td>'
+                          html+='</tr>'
+                        $("#tbody").html(html)
+                    }
+                })
+            })
+            $("#addBtn").click(function () {
+                var id = $("#add-id").val()
+                var phone = $("#add-phone").val()
+                var age = $("#add-age").val()
+                var name = $("#add-name").val()
+                $.ajax({
+                    url:'student/add',
+                    data:{
+                        id:id,
+                        name:name,
+                        phone:phone,
+                        age:age
+                    },
+                    dataType:'json',
+                    type:'post',
+                    success:function (data) {
+                        if(data==2){
+                            alert("手机号已存在！")
+                        }else if(data==1){
+                            alert("注册成功")
+                        }else {
+                            alert("网络繁忙,请稍后重试")
+                        }
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<center>
+    <input type="text" id="query">
+    <input type="button" value="查询" id="queryBtn"><br><br>
+    <table border="1" >
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>name</td>
+                <td>phone</td>
+                <td>age</td>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <hr>
+    <form action="">
+        <table border="1" >
+            <tr align="center">
+                <td>id</td>
+                <td><input type="text" id="add-id"></td>
+            </tr>
+            <tr align="center">
+                <td>name</td>
+                <td><input type="text" id="add-name"></td>
+            </tr>
+            <tr align="center">
+                <td>phone</td>
+                <td><input type="text" id="add-phone"></td>
+            </tr>
+            <tr align="center">
+                <td>age</td>
+                <td><input type="text" id="add-age"></td>
+            </tr>
+        </table><br>
+
+        <input type="button" id="addBtn" value="注册">
+    </form>
+</center>
+</body>
+</html>

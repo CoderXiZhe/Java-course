@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <p>标准变量表达式 ${key}</p>
+    <p th:text="${site}"></p>
+    <p th:text="${user.id}">id</p>
+    <p th:text="${user.name}">姓名</p>
+    <p th:text="${user.age}">年龄</p>
+    <p th:text="${user.getName()}">姓名</p>
+</center>
+</body>
+</html>

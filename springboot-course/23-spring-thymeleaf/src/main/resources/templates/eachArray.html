@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script th:src="@{/js/jquery-3.4.1.js}" type="text/javascript"></script>
+</head>
+<body>
+<center>
+    <h3>each循环array</h3>
+    <div th:each="user,userSta:${userArray}">
+        <p th:text="${user.id}"></p>
+        <p th:text="${user.name}"></p>
+        <p th:text="${user.age}"></p>
+        <hr>
+    </div>
+
+
+</center>
+</body>
+
+</html>

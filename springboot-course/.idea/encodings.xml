@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/00-redis-test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/00-redis-test/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/00-test/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/03-springboot-second/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/04-springboot-three/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/06-springboot-environment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/07-springboot-multi-environmnet/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08-springboot-custom-yml/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/09-springboot-container/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/10-spring-commandlinerunner/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/11-springboot-interceptor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/12-springboot-servlet/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/13-springboot-filter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/14-springboot-character/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/15-springboot-mapper/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/16-springboot-transactional/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/17-springboot-restful/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/18-springboot-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/20-service-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/21-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/22-springboot-war/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/23-spring-thymeleaf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/25-practice-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/26-practice-consumer/src/main/java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

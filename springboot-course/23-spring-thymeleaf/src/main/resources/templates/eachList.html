@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script th:src="@{/js/jquery-3.4.1.js}" type="text/javascript"></script>
+</head>
+<body>
+<center>
+    <h3>each循环list</h3>
+<!--    <div th:each="user,userSta:${userList}">-->
+<!--        <p th:text="${user.id}"></p>-->
+<!--        <p th:text="${user.name}"></p>-->
+<!--        <p th:text="${user.age}"></p>-->
+<!--    </div>-->
+
+    <table border="1">
+        <thead>
+            <tr>
+                <td>序号</td>
+                <td>id</td>
+                <td>name</td>
+                <td>age</td>
+            </tr>
+        </thead>
+        <tbody>
+        <!--循环体信息interStat 也可以不定义,默认采用迭代变量Stat后叕，即userStat-->
+            <tr th:each="user:${userList}">
+                <td th:text="${userStat.count} + '/' + ${userStat.size}"></td>
+                <td th:text="${user.id}"></td>
+                <td th:text="${user.name}"></td>
+                <td th:text="${userStat.current.age}"></td>
+            </tr>
+        </tbody>
+    </table>
+</center>
+</body>
+
+</html>

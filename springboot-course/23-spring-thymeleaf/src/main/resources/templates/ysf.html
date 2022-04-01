@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script th:src="@{/js/jquery-3.4.1.js}" type="text/javascript"></script>
+</head>
+<body>
+<center>
+    <h3>运算符</h3>
+    <div>
+        <p th:if="${age >18}">已经成年</p>
+        <p th:if="${sex == '男'}">男性</p>
+        <p th:if="${name eq '张三'}">姓名为张三</p>
+        <p th:if="${wife ne null}">已结婚</p>
+        <p th:if="${isLogin}">已登录</p>
+
+        <!--可以嵌套-->
+        <p th:text="${isLogin ? name + '用户已登录' :'用户未登录'}">已登录</p>
+
+
+    </div>
+
+</center>
+</body>
+
+</html>

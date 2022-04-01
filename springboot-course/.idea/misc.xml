@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/00-redis-test" />
+    <file type="web" url="file://$PROJECT_DIR$/22-springboot-war" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/00-redis-test/pom.xml" />
+        <option value="$PROJECT_DIR$/01-springboot-pre/pom.xml" />
+        <option value="$PROJECT_DIR$/03-springboot-second/pom.xml" />
+        <option value="$PROJECT_DIR$/04-springboot-three/pom.xml" />
+        <option value="$PROJECT_DIR$/06-springboot-environment/pom.xml" />
+        <option value="$PROJECT_DIR$/07-springboot-multi-environmnet/pom.xml" />
+        <option value="$PROJECT_DIR$/08-springboot-custom-yml/pom.xml" />
+        <option value="$PROJECT_DIR$/09-springboot-container/pom.xml" />
+        <option value="$PROJECT_DIR$/10-spring-commandlinerunner/pom.xml" />
+        <option value="$PROJECT_DIR$/11-springboot-interceptor/pom.xml" />
+        <option value="$PROJECT_DIR$/12-springboot-servlet/pom.xml" />
+        <option value="$PROJECT_DIR$/13-springboot-filter/pom.xml" />
+        <option value="$PROJECT_DIR$/14-springboot-character/pom.xml" />
+        <option value="$PROJECT_DIR$/15-springboot-mapper/pom.xml" />
+        <option value="$PROJECT_DIR$/00-test/pom.xml" />
+        <option value="$PROJECT_DIR$/16-springboot-transactional/pom.xml" />
+        <option value="$PROJECT_DIR$/17-springboot-restful/pom.xml" />
+        <option value="$PROJECT_DIR$/18-springboot-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/19-interface-api/pom.xml" />
+        <option value="$PROJECT_DIR$/20-service-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/21-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/22-springboot-war/pom.xml" />
+        <option value="$PROJECT_DIR$/23-spring-thymeleaf/pom.xml" />
+        <option value="$PROJECT_DIR$/24-practice-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/25-practice-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/26-practice-consumer/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

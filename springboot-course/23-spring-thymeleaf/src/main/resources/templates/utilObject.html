@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <center>
+        <h3>使用内置工具类对象 #dates </h3>
+        <p th:text="${#dates.format(mydate)}"></p>
+        <p th:text="${#dates.format(mydate,'yyyy-MM-dd HH:mm:ss')}"></p>
+        <p th:text="${#dates.year(mydate)}"></p>
+        <p th:text="${#dates.month(mydate)}"></p>
+        <p th:text="${#dates.monthName(mydate)}"></p>
+        <p th:text="${#dates.createNow()}"></p>
+
+        <h3>使用内置工具类对象 #numbers </h3>
+        <p th:text="${#numbers.formatCurrency(mynum)}"></p>
+        <p th:text="${#numbers.formatDecimal(mynum,5,2)}"></p>
+
+        <h3>使用内置工具类对象 #strings</h3>
+        <p th:text="${#strings.toUpperCase(mystr)}"></p>
+        <p th:text="${#strings.indexOf(mystr,'o')}"></p>
+        <p th:text="${#strings.substring(mystr,2,5)}"></p>
+        <p th:text="${#strings.concat(mystr,'6666')}"></p>
+
+        <h3>使用内置工具类对象 #lists</h3>
+        <p th:text="${#lists.size(mylist)}"></p>
+        <p th:text="${#lists.contains(mylist,'a')}"></p>
+        <p th:text="${#lists.isEmpty(mylist)}"></p>
+
+        <h3>处理 null</h3>
+        <p th:text="${user?.id}"></p>
+    </center>
+</body>
+</html>

@@ -1,0 +1,8 @@
+
+#\u6FC0\u6D3B\u4F7F\u7528\u54EA\u4E2A\u914D\u7F6E\u6587\u4EF6
+#\u4F7F\u7528dev\u73AF\u5883
+#spring.profiles.active=dev
+#\u4F7F\u7528test\u73AF\u5883
+spring:
+  profiles:
+    active: online

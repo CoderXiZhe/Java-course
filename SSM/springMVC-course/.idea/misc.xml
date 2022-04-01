@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/../01-hello-springmvc" />
+    <file type="web" url="file://$PROJECT_DIR$/../spring-course/02-requestmapping" />
+    <file type="web" url="file://$PROJECT_DIR$/00-test" />
+    <file type="web" url="file://$PROJECT_DIR$/01-hello-springmvc" />
+    <file type="web" url="file://$PROJECT_DIR$/03-receiveparam" />
+    <file type="web" url="file://$PROJECT_DIR$/04-return" />
+    <file type="web" url="file://$PROJECT_DIR$/05-ssm" />
+    <file type="web" url="file://$PROJECT_DIR$/06-forward-redirect" />
+    <file type="web" url="file://$PROJECT_DIR$/07-exception-handler" />
+    <file type="web" url="file://$PROJECT_DIR$/08-interceptor" />
+    <file type="web" url="file://$PROJECT_DIR$/09-intercepto2" />
+    <file type="web" url="file://$PROJECT_DIR$/10-interceptor-permission" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../01-hello-springmvc/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-course/02-requestmapping/pom.xml" />
+        <option value="$PROJECT_DIR$/01-hello-springmvc/pom.xml" />
+        <option value="$PROJECT_DIR$/03-receiveparam/pom.xml" />
+        <option value="$PROJECT_DIR$/04-return/pom.xml" />
+        <option value="$PROJECT_DIR$/05-ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/06-forward-redirect/pom.xml" />
+        <option value="$PROJECT_DIR$/07-exception-handler/pom.xml" />
+        <option value="$PROJECT_DIR$/08-interceptor/pom.xml" />
+        <option value="$PROJECT_DIR$/09-intercepto2/pom.xml" />
+        <option value="$PROJECT_DIR$/10-interceptor-permission/pom.xml" />
+        <option value="$PROJECT_DIR$/00-test/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_14" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

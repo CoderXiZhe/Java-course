@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--
+            引用类型自动注入：
+                1.byName:   自动注入属性值school  那么bean的id只能叫shcool
+
+                2.byType:
+                        引用数据类型和bean中的class值一样
+                        引用数据类型和bean中的class值父子关系
+                        引用数据类型和bean中的class值接口和实现类关系
+    -->
+    <bean id="myStudent" class="com.bjpowernode.ba04.Student" autowire="byName">
+        <property name="name" value="张三"/>
+        <property name="age" value="22"/>
+        <property name="email" value="zhangsan@qq.com"/>
+     </bean>
+
+
+    <!--这里的id要和student中的属性一样才能通过byName自动注入-->
+    <bean id="school" class="com.bjpowernode.ba04.School">
+        <property name="name" value="江苏大学"/>
+        <property name="address" value="镇江"/>
+    </bean>
+</beans>

@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="review:war">
+    <output-path>$PROJECT_DIR$/review/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>review</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="05-ssm-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="review:war exploded" />
+    </root>
+  </artifact>
+</component>

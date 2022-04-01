@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-4.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+    <!--声明数据源DataSource 作用是连接数据库-->
+    <bean id="myDataSource" class="com.alibaba.druid.pool.DruidDataSource"
+          init-method="init" destroy-method="close">
+
+        <!--set注入给DruidDataSource提供连接数据库信息-->
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <property name="maxActive" value="${jdbc.max}"/>
+
+    </bean>
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--set注入 把数据库连接池赋给dataSource属性-->
+        <property name="dataSource" ref="myDataSource"/>
+        <!--mybatis主配置文件的位置-->
+        <property name="configLocation" value="classpath:mybatis.xml"/>
+    </bean>
+
+    <!--创建dao对象-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--指定SqlSessionFactory对象的id-->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+
+        <!--指定包名  包名是dao接口所在的包名-->
+        <property name="basePackage" value="com.bjpowernode.dao"/>
+    </bean>
+
+    <!--声明service-->
+    <bean id="buyGoodsService" class="com.bjpowernode.service.impl.BuyGoodsServiceImpl">
+        <property name="goodsDao" ref="goodsDao"/>
+        <property name="saleDao" ref="saleDao"/>
+    </bean>
+
+    <!--声明事务管理器 和源代码完全分离-->
+    <!--1.声明事务管理器对象-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+    <!--2.声明业务方法他的事务属性
+            id是自定义名称
+            transaction-manager表示事务管理器的id
+    -->
+    <tx:advice id="myAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <!--<tx:method>:给具体的方法配置事务 method可以有多个 分别给不同的方法设置事务属性
+                    name：方法名称 1）完整的方法名称 不带有包和类
+                                 2)方法可以使用通配符 *表示任意字符
+                    propagation:传播行为 枚举值
+                    isolation:隔离级别
+                    rollback-for:你指定的异常类明 全限定类名 发生异常一定回滚
+            -->
+            <tx:method name="buy" propagation="REQUIRED" isolation="DEFAULT"
+                       rollback-for="java.lang.NullPointerException,com.bjpowernode.excep.NotEnoughException"/>
+        
+            <tx:method name="add*" propagation="REQUIRES_NEW"/>
+            <tx:method name="modify*" />
+            <tx:method name="remove*"/>
+            <tx:method name="*" propagation="SUPPORTS" read-only="true"/>
+        </tx:attributes>
+        
+    </tx:advice>
+    <!--配置aop-->
+    <aop:config>
+        <!--    配置切入点表达式：指定哪些包中的类 要使用事务
+                id:切入点表达式的名称 唯一值
+                expression：切入点表达式 指定哪些类要使事务
+        -->
+        <aop:pointcut id="servicePt" expression="execution(* *..service..*.*(..))"/>
+
+        <!--配置增强器 关联advice和pointcut
+               advice-ref:通知 上面tx:advice那里的配置
+               pointcut-ref:切入点表达式的id
+        -->
+        <aop:advisor advice-ref="myAdvice" pointcut-ref="servicePt"/>
+    </aop:config>
+
+</beans>

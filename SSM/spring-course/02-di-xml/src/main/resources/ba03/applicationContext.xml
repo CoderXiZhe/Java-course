@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--构造注入-->
+    <bean id="myStudent" class="com.bjpowernode.ba03.Student">
+        <constructor-arg name="myname" value="张三"/>
+        <constructor-arg name="myage" value="20"/>
+        <constructor-arg name="myschool" ref="mySchool"/>
+     </bean>
+
+    <!--使用index-->
+    <bean id="myStudent2" class="com.bjpowernode.ba03.Student">
+        <constructor-arg index="1"  value="20"/>
+        <constructor-arg index="0" value="张三"/>
+        <constructor-arg index="2"  ref="mySchool"/>
+    </bean>
+    <bean id="mySchool" class="com.bjpowernode.ba03.School">
+        <property name="name" value="清华大学"/>
+        <property name="address" value="北京"/>
+    </bean>
+</beans>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="02-link-userservice-provider" />
+        <module name="01-link-interface" />
+        <module name="16-zk-userservice-multi-provider" />
+        <module name="13-zk-interface" />
+        <module name="03-link-consumer" />
+        <module name="17-zk-multi-consumer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="01-link-interface" target="1.5" />
+      <module name="02-link-userservice-provider" target="1.8" />
+      <module name="03-link-consumer" target="1.5" />
+      <module name="13-zk-interface" target="1.5" />
+      <module name="16-zk-userservice-multi-provider" target="1.8" />
+      <module name="17-zk-multi-consumer" target="1.8" />
+      <module name="dubbo" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
